@@ -1,13 +1,7 @@
-import requests
 from django.db import models
-from django.http import HttpResponse
-from django.shortcuts import render
-from scraping.sites import *
 
 
-def home(request):
-    amazon = Amazon().file_product
-    return render(request, 'base.html', locals())
+class Site(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
 
-
-# <>
