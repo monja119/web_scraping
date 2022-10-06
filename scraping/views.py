@@ -1,8 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 from scraping.sites import *
 from scraping.models import Site
-from django.db import models
 
 
 def home(request):
